@@ -48,7 +48,7 @@ class Queue {
 
 int main() {
     int choice, e;
-    Queue queue(10);
+    Queue queue(5);
     while (1) {
         cout << "\n\t\tQUEUE IMPLEMENTATION";
         cout << "\n\t\t----------------";
