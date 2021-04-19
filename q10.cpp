@@ -63,7 +63,7 @@ int main() {
             cin >> e;
             int enqueued = queue.enqueue(e);
             if (!enqueued) {
-                cout << "\nQueue is full, Dequeue some elements before enqueueing.";
+                cout << "\nQueue is full.";
                 break;
             }
             cout << "\nSuccessfully enqueued element " << e << ", the queue is now : ";
