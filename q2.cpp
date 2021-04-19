@@ -4,6 +4,8 @@ using namespace std;
 
 
 int main() {
+    cout << "\n\t\tMERGE TWO ARRAYS";
+    cout << "\t\t-------------------";
     int array1[100], array2[100], array3[200], size1, size2;
     cout << "\nEnter the size of the first array : ";
     cin >> size1;

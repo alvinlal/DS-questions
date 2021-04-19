@@ -78,7 +78,7 @@ int main() {
     Array array;
     while (1) {
         cout << "\n\t\tARRAY IMPLEMENTATION";
-        cout << "\n\t\t----------------";
+        cout << "\n\t\t--------------------";
         cout << "\n1.Push an element (insert to the end)";
         cout << "\n2.Pop an element (delete from the end)";
         cout << "\n3.Remove an element (delete an element from middle)";

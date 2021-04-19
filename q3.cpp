@@ -91,7 +91,7 @@ int main() {
     int m, n, choice;
 
     while (1) {
-        cout << "\n\t\tSPARSE OR NOT";
+        cout << "\n\t\tSPARSE MATRIX";
         cout << "\n\t\t-------------";
         cout << "\n1.Check sparse matrix or not";
         cout << "\n2.Get linear form of a sparse matrix";

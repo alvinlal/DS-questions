@@ -1,4 +1,4 @@
-// 4. polynomial operations
+// 4. polynomial implementation
 
 #include <iostream>
 using namespace std;
@@ -67,7 +67,7 @@ int main() {
 
     while (1) {
         cout << "\n\t\tPOLYNOMIAL IMPLEMENTATION";
-        cout << "\n\t\t-------------";
+        cout << "\n\t\t-------------------------";
         cout << "\n1.Polynomial addition";
         cout << "\n2.Polynomial multiplication";
         cout << "\n3.Exit";
