@@ -77,7 +77,7 @@ class Infix {
 };
 
 int main() {
-    cout << "\n\t\tINFIX TO POSTFIX CONVERSION";
+    cout << "\n\t\tINFIX TO PREFIX CONVERSION";
     cout << "\n\t\t---------------------------";
     char infixExpression[20];
     cout << "\nEnter the Expresssion:- ";
