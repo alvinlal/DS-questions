@@ -75,7 +75,7 @@ int main() {
     cout << "\nEnter the Expresssion:- ";
     cin >> infixExpression;
     Infix infix(infixExpression);
-    cout << "\nThe postfix for is : ";
+    cout << "\nThe postfix form is : ";
     infix.toPostFix();
     cout << "\n";
 }
