@@ -77,7 +77,7 @@ int main() {
     int choice, size, element, pos;
     Array array;
     while (1) {
-        cout << "\n\t\tARRAY OPERATIONS";
+        cout << "\n\t\tARRAY IMPLEMENTATION";
         cout << "\n\t\t----------------";
         cout << "\n1.Push an element (insert to the end)";
         cout << "\n2.Pop an element (delete from the end)";
