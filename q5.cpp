@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     cout << "\n\t\tLINEAR SEARCH";
-    cout << "\t\t---------------";
+    cout << "\n\t\t---------------";
     int* array;
     int n, e;
     int found = -1;
