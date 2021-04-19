@@ -7,5 +7,6 @@
     "files.associations": {
         "iostream": "cpp"
     },
-    "editor.fontFamily": "'Fira Code'"
+    "editor.fontFamily": "'Fira Code'",
+    "diffEditor.wordWrap": "off"
 }
