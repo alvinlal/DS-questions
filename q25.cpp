@@ -13,7 +13,7 @@ int length(char str[], int n) {
 int main() {
     int n, result, i;
     char str[10];
-    cout << "\n\t\tLENGTH OF AN STRING USING RECURSION";
+    cout << "\n\t\tLENGTH OF AN ARRAY USING RECURSION";
     cout << "\n\t\t-------------------------------------";
     cout << "\nEnter the string : ";
     cin >> str;
