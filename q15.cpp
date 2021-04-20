@@ -43,14 +43,6 @@ class SinglyLinkedList {
         }
         return -1;
     }
-    void traverse() {
-        Node* current = head;
-        while (current) {
-            cout << current->val << " -> ";
-            current = current->next;
-        }
-        cout << "NULL";
-    }
 };
 
 int main() {
