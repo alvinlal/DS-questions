@@ -19,12 +19,12 @@ class Queue {
     Node* rearptr = nullptr;
     int max, front, rear;
     Queue(int max) {
-        front = -1;
-        rear = -1;
+        front = 0;
+        rear = 0;
         this->max = max;
     }
     bool enqueue(int val) {
-        if (rear == max - 1) return false;
+        if (rear == max) return false;
         Node* newNode = new Node(val);
         if (!frontptr) {
             frontptr = newNode;
@@ -38,25 +38,27 @@ class Queue {
         rear++;
         return true;
     }
-
     bool dequeue() {
-        if (front >= rear) return false;
-        if (frontptr == rearptr) {
-            front = rear = -1;
-            frontptr = rearptr = nullptr;
-            return true;
+        if (front >= rear) {
+            front = -1;
+            rear = 0;
+            return false;
         }
+        if (!frontptr || !rearptr) {
+            return false;
+        }
+        frontptr = frontptr->next;
         front++;
         return true;
     }
     void traverse() {
         Node* currentNode = frontptr;
-        std::cout << "[ ";
+        cout << "[ ";
         while (currentNode) {
-            std::cout << currentNode->val << ", ";
+            cout << currentNode->val << ", ";
             currentNode = currentNode->next;
         }
-        std::cout << "]";
+        cout << "]";
     }
 };
 
@@ -75,7 +77,7 @@ int main() {
         case 1: {
             cout << "\nEnter an element to enqueue : ";
             cin >> e;
-            int enqueued = queue.enqueue(e);
+            bool enqueued = queue.enqueue(e);
             if (!enqueued) {
                 cout << "\nQueue is full.";
                 break;
