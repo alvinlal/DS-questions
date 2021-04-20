@@ -8,7 +8,8 @@ class Node {
   public:
     Node* next = nullptr;
     int val = 0;
-    Node(int val) : val(val) {
+    Node(int val) {
+        this->val = val;
     }
 };
 
