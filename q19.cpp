@@ -40,10 +40,10 @@ class SinglyLinkedList {
     void traverse() {
         Node* current = head;
         while (current) {
-            std::cout << current->val << " -> ";
+            cout << current->val << " -> ";
             current = current->next;
         }
-        std::cout << "NULL";
+        cout << "NULL";
     }
 };
 
