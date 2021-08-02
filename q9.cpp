@@ -10,21 +10,21 @@ class Stack {
   public:
     Stack(int max) {
         stack = new int[max];
-        top = 0;
+        top = -1;
         this->max = max;
     }
     ~Stack() {
         delete[] stack;
     }
     bool push(int item) {
-        if (top == max) {
+        if (top >= max - 1) {
             return false;
         }
-        stack[top++] = item;
+        stack[++top] = item;
         return true;
     }
     bool pop() {
-        if (top <= 0) {
+        if (top < 0) {
             return false;
         }
         top--;
@@ -32,14 +32,10 @@ class Stack {
     }
     void print() {
         cout << "[ ";
-        for (int i = 0; i < top; i++) {
-            if (i == top - 1) {
-                cout << stack[i];
-            } else {
-                cout << stack[i] << ", ";
-            }
+        for (int i = 0; i <= top; i++) {
+            cout << stack[i] << " ";
         }
-        cout << " ]";
+        cout << "]";
     }
 };
 
@@ -80,9 +76,7 @@ int main() {
         case 3: {
             exit(0);
         }
-        default: {
-            cout << "\nInvaid choice!";
-        }
+        default: { cout << "\nInvaid choice!"; }
         }
     }
 }
