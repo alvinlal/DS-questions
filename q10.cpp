@@ -10,39 +10,39 @@ class Queue {
   public:
     Queue(int max) {
         queue = new int[max];
-        front = 0;
-        rear = 0;
+        front = -1;
+        rear = -1;
         this->max = max;
     }
     ~Queue() {
         delete[] queue;
     }
     bool enqueue(int item) {
-        if (rear >= max) {
+        if (rear >= max - 1) {
             return false;
         }
-        queue[rear++] = item;
+        if (front == -1) front = 0;
+        queue[++rear] = item;
         return true;
     }
     bool dequeue() {
+        if (front == -1) {
+            return false;
+        }
         if (front >= rear) {
             front = -1;
-            rear = 0;
-            return false;
+            rear = -1;
+            return true;
         }
         front++;
         return true;
     }
     void print() {
         cout << "[ ";
-        for (int i = front; i < rear; i++) {
-            if (i == rear - 1) {
-                cout << queue[i];
-            } else {
-                cout << queue[i] << ", ";
-            }
+        for (int i = front; i <= rear; i++) {
+            cout << queue[i] << " ";
         }
-        cout << " ]";
+        cout << "]";
     }
 };
 
@@ -83,9 +83,7 @@ int main() {
         case 3: {
             exit(0);
         }
-        default: {
-            cout << "\nInvalid choice!";
-        }
+        default: { cout << "\nInvalid choice!"; }
         }
     }
 }
