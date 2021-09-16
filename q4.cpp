@@ -11,9 +11,6 @@ class Polynomial {
         array = new int[degree + 1];
         this->degree = degree;
     }
-    ~Polynomial() {
-        delete[] array;
-    }
 
     void getCoefficients() {
         for (int i = degree; i >= 0; i--) {
@@ -23,6 +20,8 @@ class Polynomial {
     Polynomial add(Polynomial& other) {
         int maxDegree = degree >= other.degree ? degree : other.degree;
         Polynomial sum(maxDegree);
+
+
         for (int i = 0; i <= degree; i++) {
             sum.array[i] = array[i];
         }
@@ -33,6 +32,11 @@ class Polynomial {
     }
     Polynomial multiply(Polynomial& other) {
         Polynomial prod(degree + other.degree);
+
+        for (int i = 0; i <= prod.degree; i++) {
+            prod.array[i] = 0;
+        }
+
         for (int i = 0; i <= degree; i++) {
             for (int j = 0; j <= other.degree; j++) {
                 prod.array[i + j] = prod.array[i + j] + array[i] * other.array[j];
